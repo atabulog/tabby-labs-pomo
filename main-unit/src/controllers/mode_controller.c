@@ -1,0 +1,69 @@
+#include <unistd.h>
+
+#include "controllers/mode_controller.h"
+#include "utils/type_utils.h"
+
+static system_mode_t current_mode = mode_idle;
+
+
+/**
+ * @brief Set the value of the current mode
+ * 
+ * @param mode Value to set the current mode to
+ * @return true if mode is updated, else false
+ */
+bool mode_controller_set_mode(const system_mode_t mode);
+
+
+void mode_controller_init(void)
+{
+}
+
+system_mode_t mode_controller_get_mode(void)
+{
+    return current_mode;
+}
+
+//TODO: Write system_data_t structure
+bool mode_controller_update(const system_data_t* const system_data)
+{
+    if(system_data == NULL)
+    {
+        return false;
+    }
+
+    switch (current_mode)
+    {
+    case mode_idle:
+        /* code */
+        break;
+    case mode_timer:
+        /* code */
+        break;
+    case mode_dnd:
+        /* code */
+        break;
+    case mode_config:
+        /* code */
+        break;
+    case mode_end_of_range:
+        /* code */
+        break;
+    default:
+        break;
+    }
+
+}
+
+
+bool mode_controller_set_mode(const system_mode_t mode)
+{
+    //sanitize inputs
+    if(!is_valid_enum(mode, mode_end_of_range))
+    {
+        return false;
+    }
+
+    current_mode = mode;
+    return true;
+}
