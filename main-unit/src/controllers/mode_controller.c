@@ -50,6 +50,7 @@ bool mode_controller_update(const system_data_t* const system_data)
             ESP_LOGE(TAG, "Failed updating current mode: %s", system_mode_string(current_mode));
             return false;
     }
+    return true;
 }
 
 bool mode_controller_set_mode(const system_mode_t mode)
