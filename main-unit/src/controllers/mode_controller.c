@@ -6,7 +6,7 @@
 #include "utils/type_utils.h"
 
 static system_mode_t current_mode = mode_idle;
-static char *TAG = "mode_controller";
+static char* TAG = "mode_controller";
 
 /**
  * @brief Set the value of the current mode
@@ -25,7 +25,7 @@ system_mode_t mode_controller_get_mode(void)
     return current_mode;
 }
 
-bool mode_controller_update(const system_data_t *const system_data)
+bool mode_controller_update(const system_data_t* const system_data)
 {
     if (system_data == NULL)
     {

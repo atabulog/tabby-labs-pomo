@@ -13,7 +13,7 @@ typedef enum
     mode_end_of_range
 } system_mode_t;
 
-const char *system_mode_string(system_mode_t mode)
+const char* system_mode_string(system_mode_t mode)
 {
     switch (mode)
     {

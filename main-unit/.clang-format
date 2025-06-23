@@ -11,3 +11,6 @@ IndentCaseLabels: true
 SpacesBeforeTrailingComments: 1
 SpaceAfterCStyleCast: true
 SortIncludes: true
+
+DerivePointerAlignment: false
+PointerAlignment: Left

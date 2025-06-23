@@ -20,7 +20,7 @@ typedef enum
  * @param state The playback_state_t value.
  * @return const char* String representation of the enum value.
  */
-static inline const char *playback_state_to_string(playback_state_t state)
+static inline const char* playback_state_to_string(playback_state_t state)
 {
     switch (state)
     {

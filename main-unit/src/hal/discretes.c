@@ -9,9 +9,9 @@
 #include "hal/discretes.h"
 
 static QueueHandle_t button_event_queue;
-static char *TAG = "hal_discretes";
+static char* TAG = "hal_discretes";
 
-static void IRAM_ATTR hal_btn_isr_handler(void *arg)
+static void IRAM_ATTR hal_btn_isr_handler(void* arg)
 {
     // interpret argument
     uint32_t gpio_pin = (uint32_t) arg;
