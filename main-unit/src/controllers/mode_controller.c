@@ -1,10 +1,12 @@
 #include <unistd.h>
 
+#include "esp_log.h"
+
 #include "controllers/mode_controller.h"
 #include "utils/type_utils.h"
 
 static system_mode_t current_mode = mode_idle;
-
+static char* TAG = "mode_controller";
 
 /**
  * @brief Set the value of the current mode
@@ -46,11 +48,9 @@ bool mode_controller_update(const system_data_t* const system_data)
     case mode_config:
         /* code */
         break;
-    case mode_end_of_range:
-        /* code */
-        break;
     default:
-        break;
+        ESP_LOGE(TAG, "Failed updating current mode: %s", system_mode_string(current_mode));
+        return false;
     }
 
 }
