@@ -8,7 +8,7 @@
 /**
  * @brief Timer data type maintains pomodoro time state
  */
-typedef struct 
+typedef struct
 {
     uint32_t target_ms;
     uint32_t reference_ms;
@@ -17,4 +17,4 @@ typedef struct
     float progress; // 0.0 to 1.0
 } pomo_timer_state_t;
 
-#endif //TIMER_STATE_H
+#endif // TIMER_STATE_H

@@ -1,9 +1,7 @@
 #include "hal/hal.h"
 
-
-
-void app_main() 
+void app_main()
 {
-    //startup
+    // startup
     hal_init();
 }
